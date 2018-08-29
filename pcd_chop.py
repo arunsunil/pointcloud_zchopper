@@ -49,7 +49,7 @@ with open(filepath) as fp:
 		else:
 			split_line = line.split()
 			z = float(split_line[2])
-			# Discard points below z = level
+			# Discard points above z = level
 			if z <= level:
 					lines.append(line)	
 		line = str(fp.readline())
