@@ -24,6 +24,8 @@ if len(sys.argv) < 3:
 
 filepath = str(sys.argv[1])
 new_filename = filepath[:-4] + "_chopped.pcd"
+if os.path.isfile(new_filename):
+        os.remove(new_filename)
 level = float(sys.argv[2])
 lines = []
 idx = 0
